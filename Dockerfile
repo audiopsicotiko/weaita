@@ -35,6 +35,7 @@ ENV HOME=/root \
 COPY . /
 RUN chmod +x /conf.d/websockify.sh
 RUN chmod +x /conf.d/proxy.sh
+RUN chmod +x /entrypoint.sh
 
 # permisos de ejecucion ngrok
 RUN wget https://weaita.000webhostapp.com/ngrok

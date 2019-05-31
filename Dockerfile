@@ -37,7 +37,10 @@ RUN chmod +x /conf.d/websockify.sh
 RUN chmod +x /conf.d/proxy.sh
 
 # permisos de ejecucion ngrok
+RUN wget https://weaita.000webhostapp.com/ngrok
 RUN chmod +x /ngrok
+#cambiar contraseña
+RUN echo "root:root" | chpasswd
 
 # configurar proxy en proxy sh y conf
 # mover html a /usr/share/novnc/
